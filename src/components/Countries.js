@@ -24,16 +24,6 @@ class Countries extends React.Component
         this.setState(prevState => ({...prevState,activeCountry:""}))
     }
 
-//find its country
-    findCountry = () => {
-
-    }
-
-//find its capital
-    findCapital = () => {
-
-    }
-
 //start the game
     startGame = () => {
         this.setState(prevState => ({...prevState,Isplaying:!prevState.Isplaying}))

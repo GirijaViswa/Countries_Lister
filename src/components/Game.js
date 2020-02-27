@@ -5,11 +5,17 @@ import FindCountry from './FindCountry'
 class Game extends React.Component
 {   
     state = {allCountries:this.props.allCountries, capital:false, country:false}
+
+//find its capital
     findCapital = () => {
        this.setState(prevState => ({...prevState,capital:!prevState.capital}))
     }
-
+//find its country
     findCountry = () => {
+        this.setState(prevState => ({...prevState,country:!prevState.country}))
+    }
+//ClearState
+    clearState = () => {
         this.setState(prevState => ({...prevState,country:!prevState.country}))
     }
 
@@ -19,7 +25,7 @@ class Game extends React.Component
             <div>
             {(this.state.capital || this.state.country) ?
                 this.state.country ?
-                <FindCountry activeCountry={this.state.allCountries[parseInt(Math.random()*10)]}/>
+                <FindCountry activeCountry={this.state.allCountries[parseInt(Math.random()*10)]} clearState={this.clearState}/>
                 :
                 <FindCapital />
             :
