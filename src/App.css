@@ -36,3 +36,39 @@
     transform: rotate(360deg);
   }
 }
+
+.card-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 60px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 black;
+}
+
+.heading {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 90px;
+  font-style: italic;
+  color: crimson;
+  text-align: center;
+}
+
+.singleCountry{
+  text-align: center;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.singleCountryImg{
+  max-width: 250px;
+}
